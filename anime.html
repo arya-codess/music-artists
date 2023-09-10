@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeAdda - Dark Mode</title>
+    <style>
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #ddd;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #222;
+            transition: right 0.3s ease;
+            z-index: 2;
+        }
+
+        .menu-links {
+            padding: 40px 20px;
+            list-style-type: none;
+        }
+
+        .menu-links li {
+            margin-bottom: 20px;
+        }
+
+        .menu-links a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-links a:hover {
+            color: #fff;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            z-index: 3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .anime-box-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .anime-box {
+            background-color: #444;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .anime-box img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .anime-box h3 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .anime-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .anime-box a {
+            display: block;
+            text-align: center;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .anime-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .anime-box a:hover {
+            background-color: #333;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AnimeAdda</h1>
+    </header>
+    
+    <div class="menu-button" id="menuButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16">
+            <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z"/>
+          </svg>
+    </div>
+
+    <div class="menu-bar" id="menuBar">
+        <span class="close-button" id="closeButton">&times;</span>
+        <ul class="menu-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Anime List</a></li>
+            <li><a href="#">Manga</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to AnimeAdda</h2>
+            <p>Anime dekho fun kro maje kro.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="anime-box-container">
+            <div class="anime-box">
+                <img src="aot.jpg" alt="Attack on Titan">
+                <h3>Attack on Titan</h3>
+                <p>Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans, forcing humans to hide in fear behind enormous concentric walls.</p>
+                <a href="https://aniwatch.to/attack-on-titan-112?ref=search">Watch Now</a>
+            </div>
+
+            <div class="anime-box">
+                <img src="bl.jpg" alt="Blue Lock">
+                <h3>Blue Lock</h3>
+                <p>Yoichi Isagi was mere moments away from scoring a goal that would have sent his high school soccer team to the nationals, but a split-second decision to pass the ball to his teammate cost him t...</p>
+                <a href="https://aniwatch.to/blue-lock-17889?ref=search">Watch Now</a>
+            </div>
+
+            <div class="anime-box">
+                <img src="bsd.webp" alt="Bungo Stray Dogs">
+                <h3>Bungo Stray Dogs</h3>
+                <p>For weeks, Atsushi Nakajima's orphanage has been plagued by a mystical tiger that only he seems to be aware of. Suspected to be behind the strange incidents, the 18-year-old is abruptly kicked o...</p>
+                <a href="https://aniwatch.to/bungo-stray-dogs-858?ref=search">Watch Now</a>
+            </div>
+            
+            <div class="anime-box">
+                <img src="ds.jpg" alt="Demon Slayer">
+                <h3>Demon Slayer</h3>
+                <p>Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able t...</p>
+                <a href="https://aniwatch.to/demon-slayer-kimetsu-no-yaiba-47?ref=search">Watch Now</a>
+            </div>
+
+            <div class="anime-box">
+                <img src="jjk.webp" alt="Jujutsu Kaisen">
+                <h3>Jujutsu Kaisen</h3>
+                <p>Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfath...</p>
+                <a href="https://aniwatch.to/jujutsu-kaisen-tv-534">Watch Now</a>
+            </div>
+
+            <div class="anime-box">
+                <img src="tr.jpg" alt="Tokyo Revengers">
+                <h3>Tokyo Revengers</h3>
+                <p>Takemichi Hanagaki's life is at an all-time low. Just when he thought it couldn't get worse, he finds out that Hinata Tachibana, his ex-girlfriend, was murdered by the Tokyo Manji Gang: a group o...</p>
+                <a href="https://aniwatch.to/tokyo-revengers-15585?ref=search">Watch Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 AnimeAdda</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuBar = document.getElementById("menuBar");
+        const closeButton = document.getElementById("closeButton");
+
+        menuButton.addEventListener("click", () => {
+            menuBar.style.right = "0";
+        });
+
+        closeButton.addEventListener("click", () => {
+            menuBar.style.right = "-250px";
+        });
+    </script>
+</body>
+</html>
