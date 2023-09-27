@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taylor Swift Fan Page</title>
     <style>
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #111; /* Dark background color */
+            background-color: #111;
             color: #fff;
         }
 
@@ -49,7 +48,7 @@
         }
 
         h1 {
-            margin-bottom: 20px; /* Added space below the title */
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -75,47 +74,45 @@
             padding: 10px;
         }
 
-        /* Album Boxes */
         .album-boxes {
             display: flex;
             justify-content: space-between;
         }
 
         .album-box {
-            background-color: #444; /* Darker box background color */
+            background-color: #444;
             color: #fff;
             padding: 20px;
-            width: 45%; /* Increased box width */
+            width: 45%;
             margin: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px; /* Curved corners */
+            border-radius: 10px;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s; /* Added transition effect */
-            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
         }
 
         .album-boxes a {
-            text-decoration: none !important; /* Remove text underline from anchor elements */
-            color: #fff; /* Set text color for anchor elements */
+            text-decoration: none !important;
+            color: #fff;
         }
 
         .album-image {
             max-width: 100%;
-            height: 200px; /* Fixed height for all images */
+            height: 200px;
             display: block;
-            margin: 0 auto 10px; /* Center the images vertically */
+            margin: 0 auto 10px;
         }
 
         .album-title {
             font-size: 20px;
-            margin-top: 10px; /* Distance from image */
-            margin-bottom: 10px; /* Distance from description */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
-
-        /* Hover Effect */
+        
         .album-box:hover {
-            transform: scale(1.05); /* Slight bulge on hover */
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
         }
         .menu-button {
             position: absolute;
@@ -159,12 +156,10 @@
             font-size: 18px;
         }
 
-        /* Show menu when opened */
         .menu-container.open {
             right: 0;
         }
 
-        /* Submenu Styles */
         .submenu {
             background-color: #333;
             color: #fff;
@@ -199,12 +194,10 @@
             font-size: 18px;
         }
 
-        /* Show submenu when opened */
         .submenu.open {
             right: 0;
         }
 
-        /* Close button */
         .close-button {
             position: absolute;
             top: 10px;
@@ -273,7 +266,6 @@
             </a>
         </div>
         
-        <!-- New identical boxes -->
         <div class="album-boxes">
             <a href="#" class="album-box">
                 <img class="album-image" src="folklore.jpg" alt="Album 4">
