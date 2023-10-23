@@ -3,219 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/taylor.css">
     <title>Taylor Swift Fan Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            gap: 100px;
-            background-color: #333;
-            padding: 10px 0;
-            margin: 10px;
-        }
-
-        nav li {
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 400px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .album-boxes {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .album-box {
-            background-color: #444;
-            color: #fff;
-            padding: 20px;
-            width: 45%;
-            margin: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-
-        .album-boxes a {
-            text-decoration: none !important;
-            color: #fff;
-        }
-
-        .album-image {
-            max-width: 100%;
-            height: 200px;
-            display: block;
-            margin: 0 auto 10px;
-        }
-
-        .album-title {
-            font-size: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .album-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-        }
-        .menu-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            font-size: 24px;
-        }
-
-        .menu-container {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background-color: #333;
-            color: #fff;
-            transition: right 0.3s ease-in-out;
-        }
-
-        .menu-header {
-            background-color: #555;
-            padding: 10px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-        }
-
-        .menu-list {
-            list-style: none;
-            padding: 20px;
-        }
-
-        .menu-list li {
-            margin-bottom: 10px;
-        }
-
-        .menu-link {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .menu-container.open {
-            right: 0;
-        }
-
-        .submenu {
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            transition: right 0.3s ease-in-out;
-        }
-
-        .submenu-title {
-            background-color: #555;
-            padding: 10px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-        }
-
-        .submenu ul {
-            list-style: none;
-            padding: 20px;
-        }
-
-        .submenu ul li {
-            margin-bottom: 10px;
-        }
-
-        .submenu-link {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .submenu.open {
-            right: 0;
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        .menu-container .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 24px;
-        }
-        .album-box p {
-            text-align: left;
-        }
-    </style>
     <script>
         function toggleMenu() {
             const menuContainer = document.querySelector('.menu-container');
@@ -227,101 +16,144 @@
             submenu.classList.toggle('open');
         }
     </script>
+
 </head>
+
 <body>
+
     <header>
-        <h1>Taylor Swift Fan Page</h1>
+        <h1>Taylor Swift</h1>
         <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
     </header>
+
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#albums">Albums</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a class="yellow" href="index.html">Home</a></li>
+            <li><a class="yellow" href="#about">About</a></li>
+            <li><a class="yellow" href="#albums">Albums</a></li>
+            <li><a class="yellow" href="#music">Music</a></li>
+            <li><a class="yellow" href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+
     <section id="about">
         <h2>About Taylor Swift</h2>
-        <p>Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. Recognized for her songwriting, musical versatility, artistic reinventions, and influence on the music industry, she is a prominent cultural figure of the 21st century.<br><br> Swift began professional songwriting at age 14 and signed with Big Machine Records in 2005 to become a country singer. Under Big Machine, she released six studio albums, four of them to country radio, starting with her self-titled album in 2006. Her next, Fearless (2008), explored country pop, and its singles "Love Story" and "You Belong with Me" catapulted her to prominence. Speak Now (2010) incorporated rock influences, while Red (2012) experimented with electronic elements and featured Swift's first Billboard Hot 100 number-one song, "We Are Never Ever Getting Back Together." <a href="https://en.wikipedia.org/wiki/Taylor_Swift" class="taylor_wiki"><p>Read Wiki</p></a></p>
+        <p><span class="yellow"> Taylor Alison Swift </span>(born December 13, 1989) is an American singer-songwriter. Recognized for her songwriting, musical versatility, artistic reinventions, and influence on the music industry, she is a prominent cultural figure of the 21st century.<br><br> Swift began professional songwriting at age 14 and signed with Big Machine Records in 2005 to become a country singer. Under Big Machine, she released six studio albums, four of them to country radio, starting with her self-titled album in 2006. Her next, Fearless (2008), explored country pop, and its singles "Love Story" and "You Belong with Me" catapulted her to prominence. Speak Now (2010) incorporated rock influences, while Red (2012) experimented with electronic elements and featured Swift's first Billboard Hot 100 number-one song, "We Are Never Ever Getting Back Together." <br><br><a href="https://en.wikipedia.org/wiki/Taylor_Swift" class="taylor_wiki"><p>Read Wiki</p></a></p>
     </section>
+
     <section id="albums">
         <h2>Top Albums</h2>
+
         <div class="album-boxes">
-            <a href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j?si=GIc9Ubh-Sy2FeOUkvSveig" class="album-box">
-                <img class="album-image" src="1989.png" alt="Album 1">
-                <h3 class="album-title">1989 (2014)</h3>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5fy0X0JmZRZnVa2UEicIOl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
                 <p1>‘1989’ is a masterclass in how to make a timeless pop record. Here Taylor sacked off her country roots and embraced full-blown pop. Working with a who’s who of trendy producers and writers, she crafted a collection of glossy belters, that flit from fluffy dance-pop (‘Shake It Off’) and sophisticated electronic-tinged bops (‘Blank Space’, ‘Style’), to glorious indietronica (‘Out of the Woods’, ‘Clean’).</p>
-            </a>
-            <a href="https://open.spotify.com/album/6kZ42qRrzov54LcAk4onW9?si=NVnLqdo3RneCbkNsqZ54CA" class="album-box">
-                <img class="album-image" src="red.png" alt="Album 2">
-                <h3 class="album-title">Red (Taylor’s Version) (2021)</h3>
+                <a class="more-info-button" href="https://open.spotify.com/album/2QJmrSgbdM35R67eoGQo4j?si=GIc9Ubh-Sy2FeOUkvSveig" target="_blank"><span class="EEE">open spotify</span></a>
+            </div>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6kZ42qRrzov54LcAk4onW9?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
                 <p1>On 2012’s ‘Red’, Swift began her transition from country crossover artist to creating glossy, mainstream pop; on its 2021 re-record we were reminded just what a superb songwriter Swift has always been. ‘Red’ is filled with top notch tunes: the brilliantly snarky ‘We Are Never Ever Getting Back Together’ (Swift’s first ever Billboard 100 Number One) and fizzing ’22’ are stone-cold smashers. ‘I Knew You Were Trouble’, with its swift-step breakdown, saw her signature sound infused with trendy dance production.</p>
-            </a>
-            <a href="https://open.spotify.com/album/2Xoteh7uEpea4TohMxjtaq?si=nTYHku2lTxi6ue9Y34tNCg" class="album-box">
-                <img class="album-image" src="evermore.jpg" alt="Album 3">
-                <h3 class="album-title">Evermore (2020)</h3>
+                <a class="more-info-button" href="https://open.spotify.com/album/6kZ42qRrzov54LcAk4onW9?si=0VmJ_s7uSyqNqPPulMu2eA" target="_blank"><span class="EEE">open spotify</span></a>
+            </div>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2Xoteh7uEpea4TohMxjtaq?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
                 <p1>Taylor Swift described it as a sister record to the ‘Folklore’; where that record allowed her to completely reinvent her sound, coupling her trademark hooks and vibrant storytelling with indie-folk instrumentals, ‘Evermore’ exudes a new sense of confidence. There’s a free-wheeling, carefree attitude to the collection.</p>
-            </a>
+                <a class="more-info-button" href="https://open.spotify.com/album/2Xoteh7uEpea4TohMxjtaq?si=-t1Cr5-jQjKtJpqTif71aw" target="_blank"><span class="EEE">open spotify</span></a>
+            </div>
+
         </div>
         
         <div class="album-boxes">
-            <a href="#" class="album-box">
-                <img class="album-image" src="folklore.jpg" alt="Album 4">
-                <h3 class="album-title">Folklore (2020)</h3>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2fenSS68JI1h4Fo296JfGr?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
+                <a class="more-info-button" href="https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr?si=zWb0um-AQPiK0eVuvoKUJw" target="_blank"><span class="EEE">open spotify</span></a>
                 <p1>Swift’s surprise eighth album arrived with very little fanfare. Casting aside the usual lengthy album campaigns or meticulously planned drip-feeding of singles, T-Swiz uncharacteristically announced ‘Folklore’ the day before it was released.  It’s not just the shock drop that felt different, though, as musically it saw Swift dive head-first into a new sonic palette of wistful indie-folk.</p>
-            </a>
-            <a href="#" class="album-box">
-                <img class="album-image" src="midnights.png" alt="Album 5">
-                <h3 class="album-title">Midnights (2022)</h3>
+            </div>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/151w1FgRZfnKZA9FEcg9Z3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
+                <a class="more-info-button" href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=A7vDoLYxRuqnl-a3E2v_bA" target="_blank"><span class="EEE">open spotify</span></a>
                 <p1>Swift’s most recent release is a glittering return to pure-pop music. After embracing folk-flecked sounds on sister albums ‘Folklore’ and ‘Evermore’, for ‘Midnights’ Swift instead turns to bubbling synths and percussive beats, this sleek production run under the artist’s late night musings.</p>
-            </a>
-            <a href="#" class="album-box">
-                <img class="album-image" src="fearless.jpg" alt="Album 6">
-                <h3 class="album-title">Fearless (2021)</h3>
+            </div>
+
+            <div class="album-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4hDok0OAJd57SGIT8xuWJH?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>&#10240;</p>
+                <p>&#10240;</p>
+                <a class="more-info-button" href="https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH?si=x_a7kacITkWdvd_1tDvDCw" target="_blank"><span class="EEE">open spotify</span></a>
                 <p1>If ‘Teardrops on My Guitar’ from Swift’s debut album was her breakthrough song, it was ‘Love Story’, the ballad from its follow-up ‘Fearless’, that cemented her name in the pop history books. On Swift’s second album she still kept things country, but this time the pop edge that defined later releases was more evident. Songs like ‘Love Story’, ‘You Belong with Me’ and ‘Fifteen’, filled with heart-on-sleeve lyrics and earworm hooks, remain among her best.</p>
-            </a>
+            </div>
+
         </div>
+
     </section>
+
     <section id="music">
+
         <h2>Top Songs</h2>
-        <div class="album-boxes">
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/aXzVF3XeS8M?si=YoNa8CZh3CC797Li" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">Love Story (2008)</h3>
+
+        <div class="music-boxes">
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3CeCwYWvdfXbZLXFhBrbnf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “Fearless”<br><br>Songwriter: Taylor Swift<br><br>Accolades: “Love Story” took Best Music Video at the CMT Music Awards and the Country Music Association Awards.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/3CeCwYWvdfXbZLXFhBrbnf?si=55c464f9859643b3g" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/e-ORhEE9VVg?si=tPDkE_Db3w-SPWQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">Blank Space (2014)</h3>
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1u8c2t2Cy7UBoG4ArRcF5g?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “1989”<br><br>Songwriters: Taylor Swift, Max Martin, Shellback<br><br>Accolades: Right after “Shake It Off,” Swift earned another no. 1 here, becoming the first woman in history to succeed herself at the top of the charts, and scored Grammy bids for Record of the Year, Song of the Year and Best Pop Solo Performance for the song.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/1u8c2t2Cy7UBoG4ArRcF5g?si=65ae5e61b37140ce" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/vwp8Ur6tO-8?si=5t_YbN0mFjPGbGxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">You Belong With Me (2009)</h3>
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1qrpoAMXodY6895hGKoUpA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “Fearless”<br><br>Songwriters: Taylor Swift, Liz Rose<br><br>Accolades: Swift broke through at the Grammys when this song was nominated for Record of the Year and Song of the Year, the same ceremony where “Fearless” won Album of the Year.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/1qrpoAMXodY6895hGKoUpA?si=da14d8dbdc8b4c89" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
+
         </div>
-        <div class="album-boxes">
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/K-a8s8OLBSE?si=Y5qJ3y_JHhlr6oTN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">Cardigan (2020)</h3>
+
+        <div class="music-boxes">
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4R2kfaDFhslZEMJqAFNpdd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “Folklore“<br><br>Songwriters: Taylor Swift, Aaron Dessner<br><br>Accolades: It became Swift’s second song to debut at number-one on the Billboard Hot 100 singles chart and her sixth chart-topper overall. It earned her Grammy nominations for Song of the Year and Best Pop Solo Performance.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/4R2kfaDFhslZEMJqAFNpdd?si=93d5b28310294788" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/-BjZmE2gtdo?si=jFyvhTtZDX_4Ymf3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">Lover (2019)</h3>
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “Lover”<br><br>Songwriter: Taylor Swift<br><br>Accolades: “Lover” was nominated for a Grammy for Song of the Year and the Art Directors Guild Award for excellence in production design.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI?si=48299b264f424d79" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
-            <div class="album-box">
-                <iframe class="album-image" width="560" height="315" src="https://www.youtube.com/embed/b1kbLwvqugk?si=ZyBpNQbkh2icyb92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 class="album-title">Anti-Hero (2022)</h3>
+
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0V3wPSX9ygBnCm8psDIegu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p>Album: “Midnights”<br><br>Songwriter: Taylor Swift, Jack Antonoff<br><br>Accolades: The lead single from her 10th studio album was released the same day as the album.</p>
+                <a class="more-info-button" href="https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu?si=9a329c772eba4abe" target="_blank"><span class="EEE">open spotify</span></a>
             </div>
+
         </div>
+
     </section>
+
     <div class="menu-container">
+
         <div class="menu-header">Menu</div>
         <span class="close-button" onclick="toggleMenu()">&#10006;</span>
         <ul class="menu-list">
@@ -330,6 +162,7 @@
             <li><a class="menu-link" href="contact.html">Contact Us</a></li>
         </ul>
     </div>
+
     <div class="submenu">
         <div class="submenu-title">Artists</div>
         <span class="close-button" onclick="toggleSubmenu()">&#10006;</span>
@@ -345,10 +178,10 @@
             <li><a class="submenu-link" href="#">Arctic Monkeys</a></li>
         </ul>
     </div>
-</body>
-</html>
+
     <footer>
         <p>&copy; 2023 project delta</p>
     </footer>
+
 </body>
 </html>
