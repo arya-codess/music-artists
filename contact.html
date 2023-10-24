@@ -3,80 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <link rel="stylesheet" href="styles/contact.css">
+    <title>Contact page</title>
+
+    <script>
+        function toggleMenu() {
+            const menuContainer = document.querySelector('.menu-container');
+            menuContainer.classList.toggle('open');
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
+        function toggleSubmenu() {
+            const submenu = document.querySelector('.submenu');
+            submenu.classList.toggle('open');
         }
+    </script>
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: left;
-            padding: 20px;
-            position: relative;
-        }
-
-        .title {
-            font-size: 24px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .contact-container {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .contact-info {
-            background-color: #333;
-            border: 1px solid #555;
-            padding: 20px;
-            margin-left: 30px;
-            margin-right: 30px;
-            text-align: center;
-            position: relative;
-            color: aliceblue;
-            border-radius: 10px;
-        }
-
-        .contact-info h2 {
-            padding-bottom: 20px;
-        }
-
-        .contact-link {
-            display: block;
-            text-decoration: none;
-            color: #ffcc00;
-            font-size: 18px;
-            margin-top: 20px;
-            transition: color 0.3s;
-        }
-
-        .contact-link:hover {
-            color: #fff;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
     <title>Contact</title>
 </head>
 <body>
     <header>
         <h1 class="title">Contact</h1>
+        <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
     </header>
     <div class="contact-container">
         <div class="contact-info">
@@ -87,6 +34,33 @@
             <a class="contact-link" href="https://open.spotify.com/user/gwys73yahtks1i3473vjg7v27">Spotify</a>
             <a class="contact-link" href="https://snapchat.com/add/ihate_arya">Snapchat</a>
         </div>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="menu-header">Menu</div>
+        <span class="close-button" onclick="toggleMenu()">&#10006;</span>
+        <ul class="menu-list">
+            <li><a class="menu-link" href="music.html">Home</a></li>
+            <li><a class="menu-link" href="#" onclick="toggleSubmenu()">Artists</a></li>
+            <li><a class="menu-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="submenu">
+        <div class="submenu-title">Artists</div>
+        <span class="close-button" onclick="toggleSubmenu()">&#10006;</span>
+        <ul>
+            <li><a class="submenu-link" href="taylor.html">Taylor Swift</a></li>
+            <li><a class="submenu-link" href="lana.html">Lana Del Rey</a></li>
+            <li><a class="submenu-link" href="#">One Direction</a></li>
+            <li><a class="submenu-link" href="#">Shawn Mendes</a></li>
+            <li><a class="submenu-link" href="#">Selena Gomez</a></li>
+            <li><a class="submenu-link" href="#">Justin Bieber</a></li>
+            <li><a class="submenu-link" href="#">The Weeknd</a></li>
+            <li><a class="submenu-link" href="#">Cigarettes After Sex</a></li>
+            <li><a class="submenu-link" href="#">Arctic Monkeys</a></li>
+        </ul>
     </div>
     <footer>
         <p>&copy; 2023 project delta</p>
