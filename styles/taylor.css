@@ -248,8 +248,8 @@ footer {
 }
 
 .more-info-button {
-  background-color: #ffcc00;
-  color: #333;
+  background-color: #1DB954;
+  color: #191414;
   border: none;
   border-radius: 5px;
   padding: 10px 40px;
@@ -266,16 +266,16 @@ footer {
 }
 
 .more-info-button:hover {
-  background-color: #333;
-  color: #ffcc00;
+  background-color: #191414;
+  color: #1DB954;
   
 }
 
 .more-info-button:hover .EEE{
-  color: #ffcc00;
+  color: #1DB954;
 }
 
 .EEE{
-  color: #333;
-  
+  color: #191414;
+  transition: background-color 0.3s, color 0.3s;
 }
